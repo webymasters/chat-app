@@ -11,17 +11,19 @@
 	<body >
 		
 
+		<h1 class="top">Chatroom by Manpreet Singh</h1>
+
 		<!-- Form: Input field, send button, 
 				 Messages: ordered list -->
-		<form id="uName">
-			<input type = "text" id="profileName">
-			<button type="submit" >Enter Your Name</button>
+		<form id="uName"  class="setname">
+			<input type = "text" id="profileName" placeholder="Guest">
+			<button type="submit">Set Custom Name</button>
 		</form>
-		<ol id="messages"></ol>
-			<form id="sendChatMsg">
+		<div id="messages" class="messages"></div>
+			<form id="sendChatMsg" class="msgin">
 				
-				<input type="text" id="txtmsg">
-				<button type="submit">Send Messages</button>
+				<input type="text" id="txtmsg" required >
+				<button type="submit" >Send</button>
 				
 			</form>
 		

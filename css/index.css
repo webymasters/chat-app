@@ -1,3 +1,64 @@
 body {
-	background-color: grey;
+	background-color: rgb(231, 231, 231);
+}
+.top {
+	text-align: center;
+}
+.messages {
+
+
+width:60%;
+height:500px;
+margin-left: 20%;
+line-height:1em;
+overflow:scroll;
+padding:5px;
+background-color:#FCFADD;
+color:#714D03;
+scrollbar-base-color:#DEBB07;
+
+}
+.msgin
+{
+	text-align: center;
+}
+
+ .msgin input[type=text] {
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+  }
+  
+.msgin button {
+
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.setname
+{
+	text-align: center;
+}
+
+ .setname input[type=text] {
+	width: 30%;
+	padding: 12px 10px;
+	margin: 8px 0;
+	box-sizing: border-box;
+  }
+  
+.setname button {
+
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }

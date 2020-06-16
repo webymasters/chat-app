@@ -49,9 +49,9 @@ $msgForm.addEventListener('submit', (event) => {
 	socket.on('chatmsg', (data) => {
 
 		console.log(`${data.user} : ${data.msg}`)
-		const postMsg = document.createElement('li')
+		const postMsg = document.createElement('p')
 		$msgList.appendChild(postMsg)
-		postMsg.style.color = "red"
-		postMsg.style.textAlign="center"
+		postMsg.style.color = "dimgrey"
 		postMsg.textContent = `${data.user} : ${data.msg}`
+	
 	})
