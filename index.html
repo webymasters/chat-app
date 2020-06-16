@@ -8,17 +8,25 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
-	<body>
-		<h1>Hello World</h1>
+	<body >
+		
 
 		<!-- Form: Input field, send button, 
 				 Messages: ordered list -->
-		<form id="sendMsg">
-			<input type="text" id="txt">
-			<button type="submit">Send</button>
+		<form id="uName">
+			<input type = "text" id="profileName">
+			<button type="submit" >Enter Your Name</button>
 		</form>
-
 		<ol id="messages"></ol>
+			<form id="sendChatMsg">
+				
+				<input type="text" id="txtmsg">
+				<button type="submit">Send Messages</button>
+				
+			</form>
+		
+
+	
 
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="js/index.js"></script>

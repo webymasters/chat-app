@@ -15,6 +15,7 @@ app.use(express.static('.'))
 
 
 io.on('connection', function (socket) {
+
 	
   // Listen for a "newuser" message
   socket.on('newuser', (data) => {
@@ -28,7 +29,7 @@ io.on('connection', function (socket) {
 	
 	// Listen for "chatmsg"
 	//   io.emit to all user
-	socket.on('chatmsg', (data) => {
+	socket.on('chatsmsg', (data) => {
 		io.emit('chatmsg', data)
 	})
 
