@@ -29,8 +29,8 @@ io.on('connection', function (socket) {
 	
 	// Listen for "chatmsg"
 	//   io.emit to all user
-	socket.on('chatsmsg', (data) => {
-		io.emit('chatmsg', data)
+	socket.on('chats', (data) => {
+		io.emit('chats', data)
 	})
 
 

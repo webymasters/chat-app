@@ -27,7 +27,14 @@ $userName.addEventListener('submit',(event) =>{
 	//console.log(`${profileName} joined chatroom `)
 })
 // Event listener, waiting for an incoming "newuser"
-socket.on('newuser', (data) => { console.log(`${data.uname} has connected!`) })
+socket.on('newuser', (data) => {
+console.log(`${data.uname} has connected!`)
+const postMsg = document.createElement('p')
+$msgList.appendChild(postMsg)
+postMsg.style.color = "green"
+postMsg.textContent = `${data.uname} has joined Chatroom!`
+
+})
 
 
 
@@ -35,18 +42,18 @@ $msgForm.addEventListener('submit', (event) => {
 	event.preventDefault()
 	if(profileName)
 	{
-		socket.emit('chatmsg', {msg: event.currentTarget.txtmsg.value , user: profileName})	
+		socket.emit('chats', {msg: event.currentTarget.txtmsg.value , user: profileName})	
 	}
 
 	else
 	{
-		socket.emit('chatmsg', {msg: event.currentTarget.txtmsg.value , user: "Guest"})	
+		socket.emit('chats', {msg: event.currentTarget.txtmsg.value , user: "Guest"})	
 	}
 	
 })
 
 
-	socket.on('chatmsg', (data) => {
+	socket.on('chats', (data) => {
 
 		console.log(`${data.user} : ${data.msg}`)
 		const postMsg = document.createElement('p')
